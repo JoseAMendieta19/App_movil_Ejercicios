@@ -12,6 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_movil_Ejercicios">
         <activity
+            android:name=".Ejercicio8"
+            android:exported="false" />
+        <activity
+            android:name=".Ejercicio7"
+            android:exported="false" />
+        <activity
+            android:name=".Ejercicio6"
+            android:exported="false" />
+        <activity
+            android:name=".Ejercicio5"
+            android:exported="false" />
+        <activity
+            android:name=".Ejercicio4"
+            android:exported="false" />
+        <activity
+            android:name=".Ejercicio3"
+            android:exported="false" />
+        <activity
+            android:name=".Ejercicio2"
+            android:exported="false" />
+        <activity
+            android:name=".Ejercicio1"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
