@@ -27,6 +27,7 @@ class Ejercicio3 : AppCompatActivity() {
         val TextNumber = findViewById<EditText>(R.id.TextNumber)
         val btncalcular = findViewById<Button>(R.id.btncalcular)
         val textViewTabla = findViewById<TextView>(R.id.textViewTabla)
+        val btnvolver3 = findViewById<Button>(R.id.btnvolver3)
 
         // Evento del botón
         btncalcular.setOnClickListener {
@@ -46,6 +47,12 @@ class Ejercicio3 : AppCompatActivity() {
             } else {
                 textViewTabla.text = "Ingrese un número válido"
             }
+        }
+
+        // Botón volver
+        btnvolver3.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
