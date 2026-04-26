@@ -1,8 +1,10 @@
 package com.example.app_movil_ejercicios
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -25,76 +27,80 @@ class Ejercicio2 : AppCompatActivity() {
             insets
         }
 
-
         val etTemp = findViewById<EditText>(R.id.etTemperatura)
         val spinner = findViewById<Spinner>(R.id.spConversion)
         val btnConvertir = findViewById<Button>(R.id.btnConvertir)
         val tvResultado = findViewById<TextView>(R.id.tvResultado)
         val btnvolver2 = findViewById<Button>(R.id.btnvolver2)
 
-        // 📌 Opciones del Spinner
+        // Opciones del Spinner
         val opciones = arrayOf(
             "Seleccione una opción",
             "Celsius a Fahrenheit",
             "Fahrenheit a Celsius"
         )
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, opciones)
+        // Adapter con colores personalizados
+        val adapter = object : ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, opciones) {
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getView(position, convertView, parent)
+                (view as TextView).setTextColor(Color.parseColor("#1A3A6A"))
+                return view
+            }
+            override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getDropDownView(position, convertView, parent)
+                (view as TextView).setTextColor(Color.parseColor("#1A3A6A"))
+                view.setBackgroundColor(Color.parseColor("#EEF4FB"))
+                return view
+            }
+        }
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
         spinner.setSelection(0)
 
-        // 🔄 Cambiar hint dinámicamente
+        // Cambiar hint dinámicamente
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
-
                 when (position) {
                     1 -> etTemp.hint = "Ingrese °C"
                     2 -> etTemp.hint = "Ingrese °F"
-                    else -> etTemp.hint = "Ingrese temperatura"
+                    else -> etTemp.hint = "Valor"
                 }
             }
-
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
-        // 🔘 Botón convertir
+        // Botón convertir
         btnConvertir.setOnClickListener {
-
             val valor = etTemp.text.toString().toDoubleOrNull()
             val seleccion = spinner.selectedItemPosition
 
-            // 🔴 Validar selección
             if (seleccion == 0) {
                 tvResultado.text = "Seleccione una conversión"
                 return@setOnClickListener
             }
 
-            // 🔴 Validar campo vacío
             if (valor == null) {
                 etTemp.error = "Ingrese un valor"
                 return@setOnClickListener
             }
 
             val (resultado, unidad) = when (seleccion) {
-
-                1 -> { // Celsius a Fahrenheit
+                1 -> {
                     val res = valor * 9 / 5 + 32
                     Pair(String.format("%.2f", res), "°F")
                 }
-
-                2 -> { // Fahrenheit a Celsius
+                2 -> {
                     val res = (valor - 32) * 5 / 9
                     Pair(String.format("%.2f", res), "°C")
                 }
-
                 else -> Pair("Error", "")
             }
 
             tvResultado.text = "Resultado: $resultado $unidad"
         }
 
-        // botón de volver
+        // Botón volver
         btnvolver2.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
