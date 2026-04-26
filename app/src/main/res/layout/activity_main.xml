@@ -1,72 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:background="#EEF4FB">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:text="EJERCICIOS"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="40dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="30dp">
 
-    <Button
-        android:id="@+id/btnejercicio1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejercicio 1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            android:text="Menú Principal"
+            android:textAlignment="center"
+            android:textColor="#1A3A6A"
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnejercicio2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejercicio 2" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:text="Selecciona un ejercicio"
+            android:textAlignment="center"
+            android:textColor="#7A9ABF"
+            android:textSize="13sp" />
 
-    <Button
-        android:id="@+id/btnejercicio3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejercicio 3" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnejercicio1"
+            android:layout_width="180dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ejercicio 1"
+            android:textColor="#1A3A6A"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B8D8F5"
+            app:cornerRadius="20dp"
+            app:elevation="0dp" />
 
-    <Button
-        android:id="@+id/btnejercicio4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejercicio 4" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnejercicio2"
+            android:layout_width="180dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ejercicio 2"
+            android:textColor="#1A3A6A"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B8D8F5"
+            app:cornerRadius="20dp"
+            app:elevation="0dp" />
 
-    <Button
-        android:id="@+id/btnejercicio5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejercicio 5" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnejercicio3"
+            android:layout_width="180dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ejercicio 3"
+            android:textColor="#1A3A6A"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B8D8F5"
+            app:cornerRadius="20dp"
+            app:elevation="0dp" />
 
-    <Button
-        android:id="@+id/btnejercicio6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejercicio 6" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnejercicio4"
+            android:layout_width="180dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ejercicio 4"
+            android:textColor="#1A3A6A"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B8D8F5"
+            app:cornerRadius="20dp"
+            app:elevation="0dp" />
 
-    <Button
-        android:id="@+id/btnejercicio7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejercicio 7" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnejercicio5"
+            android:layout_width="180dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ejercicio 5"
+            android:textColor="#1A3A6A"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B8D8F5"
+            app:cornerRadius="20dp"
+            app:elevation="0dp" />
 
-    <Button
-        android:id="@+id/btnejercicio8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ejercicio 8" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnejercicio6"
+            android:layout_width="180dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ejercicio 6"
+            android:textColor="#1A3A6A"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B8D8F5"
+            app:cornerRadius="20dp"
+            app:elevation="0dp" />
 
-</LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnejercicio7"
+            android:layout_width="180dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ejercicio 7"
+            android:textColor="#1A3A6A"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B8D8F5"
+            app:cornerRadius="20dp"
+            app:elevation="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnejercicio8"
+            android:layout_width="180dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ejercicio 8"
+            android:textColor="#1A3A6A"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="#B8D8F5"
+            app:cornerRadius="20dp"
+            app:elevation="0dp" />
+
+    </LinearLayout>
+</ScrollView>
