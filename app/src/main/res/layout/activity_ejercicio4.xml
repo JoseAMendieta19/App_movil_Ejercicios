@@ -1,28 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEF4FB"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".Ejercicio4">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ejercico 4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231"
-        tools:layout_editor_absoluteX="184dp" />
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="4. Calculadora de IMC"
+        android:textAlignment="center"
+        android:textColor="#1A3A6A"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnvolver4"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="Ingresa tu peso y altura"
+        android:textAlignment="center"
+        android:textColor="#7A9ABF"
+        android:textSize="13sp" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etPeso"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:hint="Peso"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="kg"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etAltura"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:hint="Altura"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="m"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCalcularIMC"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="7dp"
+        android:text="Calcular IMC"
+        android:textColor="#1A3A6A"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#B8D8F5"
+        app:cornerRadius="20dp"
+        app:elevation="0dp" />
+
+    <TextView
+        android:id="@+id/tvResultadoIMC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textColor="#1A3A6A"
+        android:textSize="18sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnvolver4"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
         android:text="Volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898"
-        tools:layout_editor_absoluteX="184dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="#1A3A6A"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#B8D8F5"
+        app:cornerRadius="20dp"
+        app:elevation="0dp" />
+
+</LinearLayout>
