@@ -1,5 +1,6 @@
 package com.example.app_movil_ejercicios
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -21,6 +22,8 @@ class Ejercicio6 : AppCompatActivity() {
         val textViewPista = findViewById<TextView>(R.id.textViewPista)
         val textViewIntentos = findViewById<TextView>(R.id.textViewIntentos)
         val btnReiniciar = findViewById<Button>(R.id.button2)
+        val btnvolver6 = findViewById<Button>(R.id.btnvolver6)
+
 
         btnProbar.setOnClickListener {
 
@@ -55,6 +58,10 @@ class Ejercicio6 : AppCompatActivity() {
 
             textViewPista.text = ""
             textViewIntentos.text = "Intentos: 0"
+        }
+        btnvolver6.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

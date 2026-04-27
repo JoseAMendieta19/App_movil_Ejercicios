@@ -16,7 +16,7 @@
         android:layout_marginTop="25dp"
         android:text="5. Generador de números primos"
         android:textAlignment="center"
-        android:textColor="#3F51B5"
+        android:textColor="#1A3A6A"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,8 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="#B8D8F5"
         android:text="Generar"
-        android:textColor="#151D47" />
+        android:textColor="#151D47"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewPrimos"
@@ -72,6 +73,7 @@
         android:backgroundTint="#B8D8F5"
         android:text="Volver"
         android:textColor="#151D47"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.898"

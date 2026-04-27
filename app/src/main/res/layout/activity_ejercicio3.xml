@@ -17,7 +17,7 @@
         android:layout_marginTop="25dp"
         android:text="3. Tabla de Multiplicar"
         android:textAlignment="center"
-        android:textColor="#3F51B5"
+        android:textColor="#1A3A6A"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btncalcular"
@@ -53,6 +53,7 @@
         android:backgroundTint="#B8D8F5"
         android:text="Calcular"
         android:textColor="#151D47"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
@@ -78,6 +79,7 @@
         android:text="Volver"
         android:textColor="#151D47"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:rippleColor="#0B3657" />
 
 </LinearLayout>

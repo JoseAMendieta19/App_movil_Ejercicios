@@ -37,33 +37,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="4dp">
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/rbCirculo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:buttonTint="#1A3A6A"
             android:text="Círculo"
             android:textColor="#1A3A6A"
-            android:buttonTint="#1A3A6A"
             app:buttonTint="#1A3A6A" />
 
         <RadioButton
             android:id="@+id/rbRectangulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:buttonTint="#1A3A6A"
             android:text="Rectángulo"
             android:textColor="#1A3A6A"
-            android:buttonTint="#1A3A6A"
             app:buttonTint="#1A3A6A" />
 
         <RadioButton
             android:id="@+id/rbTriangulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:buttonTint="#1A3A6A"
             android:text="Triángulo"
             android:textColor="#1A3A6A"
-            android:buttonTint="#1A3A6A"
             app:buttonTint="#1A3A6A" />
     </RadioGroup>
 
