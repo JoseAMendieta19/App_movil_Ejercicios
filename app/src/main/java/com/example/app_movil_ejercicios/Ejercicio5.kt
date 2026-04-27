@@ -37,7 +37,7 @@ class Ejercicio5 : AppCompatActivity() {
                     }
 
                     if (esPrimo) {
-                        resultado += "$num "
+                        resultado += "$num, "
                     }
                 }
 
