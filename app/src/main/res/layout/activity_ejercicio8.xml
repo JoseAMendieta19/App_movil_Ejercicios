@@ -36,13 +36,15 @@
         android:id="@+id/etCantidad"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:hint="Ingrese cantidad"
+        android:layout_marginBottom="12dp"
+        android:hint="Valor"
         android:inputType="numberDecimal"
         android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
 
         <TextView
@@ -69,12 +71,14 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
             android:layout_weight="1"
             android:text="Detino: "
             android:textSize="16sp"

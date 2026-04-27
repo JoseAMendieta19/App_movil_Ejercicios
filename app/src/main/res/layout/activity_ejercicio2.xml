@@ -38,6 +38,7 @@
         android:id="@+id/etTemperatura"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
         android:hint="Valor"
         android:inputType="numberDecimal|numberSigned"
         android:paddingTop="0dp" />

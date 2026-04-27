@@ -1,7 +1,10 @@
 package com.example.app_movil_ejercicios
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -35,12 +38,26 @@ class Ejercicio8 : AppCompatActivity() {
             "Seleccione",
             "USD (Dólar)",
             "EUR (Euro)",
-            "PEN (Sol )",
-            "JPY (Yen Japones)",
+            "PEN (Sol peruano)",
+            "JPY (Yen japones)",
             "MXN (Peso mexicano)"
         )
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, monedas)
+        // Adapter con colores del diseño
+        val adapter = object : ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, monedas) {
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getView(position, convertView, parent)
+                (view as TextView).setTextColor(Color.parseColor("#1A3A6A"))
+                view.setBackgroundColor(Color.parseColor("#FFFFFF"))
+                return view
+            }
+            override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val view = super.getDropDownView(position, convertView, parent)
+                (view as TextView).setTextColor(Color.parseColor("#1A3A6A"))
+                view.setBackgroundColor(Color.parseColor("#EEF4FB"))
+                return view
+            }
+        }
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         spOrigen.adapter = adapter
@@ -50,8 +67,8 @@ class Ejercicio8 : AppCompatActivity() {
         val tasasUSD = mapOf(
             "USD (Dólar)" to 1.0,
             "EUR (Euro)" to 0.92,
-            "PEN (Sol )" to 3.7,
-            "JPY (Yen Japones)" to 150.0,
+            "PEN (Sol peruano)" to 3.7,
+            "JPY (Yen japones)" to 150.0,
             "MXN (Peso mexicano)" to 17.0
         )
 
@@ -61,7 +78,6 @@ class Ejercicio8 : AppCompatActivity() {
             val origen = spOrigen.selectedItem.toString()
             val destino = spDestino.selectedItem.toString()
 
-            // Validaciones
             if (cantidad == null) {
                 etCantidad.error = "Ingrese una cantidad"
                 return@setOnClickListener
@@ -77,18 +93,12 @@ class Ejercicio8 : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Convertir a USD
             val enUSD = cantidad / tasasUSD[origen]!!
-
-            //  Convertir a moneda destino
             val resultado = enUSD * tasasUSD[destino]!!
-
             val resFormateado = String.format("%.2f", resultado)
 
             tvResultado.text = "Resultado: $resFormateado $destino"
         }
-
-        // Botón volver
 
         btnvolver8.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
