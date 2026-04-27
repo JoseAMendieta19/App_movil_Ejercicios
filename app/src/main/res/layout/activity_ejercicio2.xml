@@ -1,28 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEF4FB"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
     tools:context=".Ejercicio2">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="174dp" />
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="2. Conversor de Temperatura"
+        android:textAlignment="center"
+        android:textColor="#1A3A6A"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnvolver2"
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:paddingBottom="0dp"
+        android:text="Ingresa la temperatura a convertir"
+        android:textAlignment="center"
+        android:textColor="#7A9ABF"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/etTemperatura"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:hint="Valor"
+        android:inputType="numberDecimal|numberSigned"
+        android:paddingTop="0dp" />
+
+    <Spinner
+        android:id="@+id/spConversion"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFF"
+        android:padding="10dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConvertir"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="7dp"
+        android:text="Convertir"
+        android:textColor="#1A3A6A"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#B8D8F5"
+        app:cornerRadius="20dp"
+        app:elevation="0dp" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textColor="#1A3A6A"
+        android:textSize="18sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnvolver2"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
         android:text="Volver"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934"
-        tools:layout_editor_absoluteX="160dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="#1A3A6A"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="#B8D8F5"
+        app:cornerRadius="20dp"
+        app:elevation="0dp" />
+
+</LinearLayout>

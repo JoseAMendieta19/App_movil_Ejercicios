@@ -22,6 +22,16 @@
         android:textSize="22sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:paddingBottom="0dp"
+        android:text="Selecciona la figura"
+        android:textAlignment="center"
+        android:textColor="#7A9ABF"
+        android:textSize="13sp" />
+
     <RadioGroup
         android:id="@+id/radioGroupFiguras"
         android:layout_width="wrap_content"
