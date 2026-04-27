@@ -50,7 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:backgroundTint="#B8D8F5"
         android:text="Calcular"
+        android:textColor="#151D47"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
@@ -72,7 +74,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="40dp"
+        android:backgroundTint="#B8D8F5"
         android:text="Volver"
+        android:textColor="#151D47"
         android:textSize="16sp"
         app:rippleColor="#0B3657" />
 
