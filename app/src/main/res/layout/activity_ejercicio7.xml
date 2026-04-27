@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="15dp"
     android:background="#EEF4FB"
     android:orientation="vertical">
 
@@ -16,6 +15,7 @@
         android:layout_marginTop="25sp"
         android:text="7. Calculadora de interés compuesto"
         android:textAlignment="center"
+        android:textColor="#1A3A6A"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -141,7 +141,8 @@
         android:layout_marginTop="15dp"
         android:backgroundTint="#B8D8F5"
         android:text="Calcular"
-        android:textColor="#151D47" />
+        android:textColor="#151D47"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewResultado"
@@ -160,6 +161,7 @@
         android:backgroundTint="#B8D8F5"
         android:text="Volver"
         android:textColor="#151D47"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.898"

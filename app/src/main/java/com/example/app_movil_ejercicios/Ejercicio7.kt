@@ -15,28 +15,41 @@ class Ejercicio7 : AppCompatActivity() {
         val editCapital = findViewById<EditText>(R.id.editCapital)
         val editTasa = findViewById<EditText>(R.id.editTasa)
         val editPeriodos = findViewById<EditText>(R.id.editPeriodos)
+        val spinnerTipo = findViewById<Spinner>(R.id.spinnerTipo)
         val btnCalcular = findViewById<Button>(R.id.btnCalcular)
         val textViewResultado = findViewById<TextView>(R.id.textViewResultado)
 
         btnCalcular.setOnClickListener {
 
             val capital = editCapital.text.toString().toDoubleOrNull()
-            val tasa = editTasa.text.toString().toDoubleOrNull()
-            val periodos = editPeriodos.text.toString().toIntOrNull()
+            val tasaAnual = editTasa.text.toString().toDoubleOrNull()
+            val periodos = editPeriodos.text.toString().toIntOrNull() // años
 
-            if (capital != null && tasa != null && periodos != null) {
+            if (capital != null && tasaAnual != null && periodos != null) {
 
-                val r = tasa / 100
-                var resultado = ""
-
-                for (i in 1..periodos) {
-                    val monto = capital * (1 + r).pow(i)
-                    resultado += "Período $i: $${String.format("%.2f", monto)}\n"
+                // Veces que se capitaliza por año según el Spinner
+                val n = when (spinnerTipo.selectedItem.toString().lowercase()) {
+                    "anual"      -> 1
+                    "semestral"  -> 2
+                    "trimestral" -> 4
+                    "mensual"    -> 12
+                    else         -> 1
                 }
 
-                val final = capital * (1 + r).pow(periodos)
+                val r = tasaAnual / 100  // tasa anual en decimal
+                var resultado = ""
 
-                resultado += "\nMonto final: $${String.format("%.2f", final)}"
+                // Muestra el monto al final de cada AÑO
+                for (i in 1..periodos) {
+                    val monto = capital * (1 + r / n).pow((n * i).toDouble())
+                    resultado += "Año $i: $${String.format("%.2f", monto)}\n"
+                }
+
+                val montoFinal = capital * (1 + r / n).pow((n * periodos).toDouble())
+                val interesGanado = montoFinal - capital
+
+                resultado += "\nMonto final:     $${String.format("%.2f", montoFinal)}"
+                resultado += "\nInterés ganado:  $${String.format("%.2f", interesGanado)}"
 
                 textViewResultado.text = resultado
 
@@ -46,7 +59,6 @@ class Ejercicio7 : AppCompatActivity() {
         }
 
         val btnvolver7 = findViewById<Button>(R.id.btnvolver7)
-
         btnvolver7.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
