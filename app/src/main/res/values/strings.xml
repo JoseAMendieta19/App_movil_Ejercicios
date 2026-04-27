@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">App_movil_Ejercicios</string>
+    <string-array name="tipos_capitalizacion">
+        <item>Anual</item>
+        <item>Semestral</item>
+        <item>Trimestral</item>
+        <item>Mensual</item>
+    </string-array>
 </resources>
