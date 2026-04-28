@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#EEF4FB"
+    tools:context=".Ejercicio1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="clip_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="1. Área y Perímetro"
+                android:textAlignment="center"
+                android:textColor="#1A3A6A"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingBottom="0dp"
+                android:text="Selecciona la figura"
+                android:textAlignment="center"
+                android:textColor="#7A9ABF"
+                android:textSize="13sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupFiguras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="6dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbCirculo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:buttonTint="#1A3A6A"
+                    android:text="Círculo"
+                    android:textColor="#1A3A6A"
+                    app:buttonTint="#1A3A6A" />
+
+                <RadioButton
+                    android:id="@+id/rbRectangulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:buttonTint="#1A3A6A"
+                    android:text="Rectángulo"
+                    android:textColor="#1A3A6A"
+                    app:buttonTint="#1A3A6A" />
+
+                <RadioButton
+                    android:id="@+id/rbTriangulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:buttonTint="#1A3A6A"
+                    android:text="Triángulo"
+                    android:textColor="#1A3A6A"
+                    app:buttonTint="#1A3A6A" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etValor1"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:hint="Valor 1"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etValor2"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:hint="Valor 2"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etValor3"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:hint="Valor 3"
+                android:inputType="numberDecimal" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalcular"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="7dp"
+                android:text="Calcular"
+                android:textColor="#1A3A6A"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#B8D8F5"
+                app:cornerRadius="20dp"
+                app:elevation="0dp" />
+
+            <TextView
+                android:id="@+id/tvResultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="Resultado"
+                android:textColor="#1A3A6A"
+                android:textSize="18sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnvolver1"
+                android:layout_width="150dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:text="Volver"
+                android:textColor="#1A3A6A"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="#B8D8F5"
+                app:cornerRadius="20dp"
+                app:elevation="0dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
